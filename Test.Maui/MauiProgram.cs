@@ -4,6 +4,7 @@ using PropertyValidator.ValidationPack;
 using Test.Maui.Resources.Texts;
 using Test.Maui.Services;
 using Test.Maui.ViewModels;
+using CrossUtility.Extensions;
 
 namespace Test.Maui;
 
@@ -24,14 +25,22 @@ public class MauiProgram
                     });
 
                     ErrorMessageHelper.UpdateResource<ErrorMessages>();
+
+                    var validationService = container.Resolve<IValidationService>();
+                    validationService.SetErrorFormatter(errorMessages => 
+                        string.Join(
+                            Environment.NewLine, 
+                            errorMessages.WhereNot(string.IsNullOrEmpty).Select(e => e + ".")
+                        )
+                    );
                 });
 
                 prism.RegisterTypes(registry =>
                 {
                     registry
                         .RegisterForNavigation<MainPage, MainPageViewModel>()
-                        .Register<IValidationService, ValidationService>()
-                        .Register<IToastService, DummyToastService>();
+                        .RegisterSingleton<IValidationService, ValidationService>()
+                        .RegisterSingleton<IToastService, DummyToastService>();
                 });
 
                 prism.OnAppStart(async (container, navigation) =>

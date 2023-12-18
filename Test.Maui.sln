@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropertyValidator", "..\Nkr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropertyValidator.ValidationPack", "..\Nkraft\PropertyValidator.ValidationPack\src\PropertyValidator.ValidationPack.csproj", "{292047FD-6B44-4FB1-8EDC-EE792FADE19C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossUtility", "..\Nkraft\CrossUtility\src\CrossUtility.csproj", "{7699CE06-3029-4BDD-B2E0-08B1AEA447D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{292047FD-6B44-4FB1-8EDC-EE792FADE19C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{292047FD-6B44-4FB1-8EDC-EE792FADE19C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{292047FD-6B44-4FB1-8EDC-EE792FADE19C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7699CE06-3029-4BDD-B2E0-08B1AEA447D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7699CE06-3029-4BDD-B2E0-08B1AEA447D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7699CE06-3029-4BDD-B2E0-08B1AEA447D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7699CE06-3029-4BDD-B2E0-08B1AEA447D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
