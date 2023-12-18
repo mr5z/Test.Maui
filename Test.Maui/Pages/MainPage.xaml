@@ -5,8 +5,7 @@
     xmlns:vm="clr-namespace:Test.Maui.ViewModels"
     xmlns:prism="http://prismlibrary.com"
     x:Class="Test.Maui.MainPage"
-    x:DataType="vm:MainPageViewModel"
-    prism:ViewModelLocator.AutowireViewModel="Automatic">
+    x:DataType="vm:MainPageViewModel">
 
     <ScrollView
         VerticalOptions="FillAndExpand">

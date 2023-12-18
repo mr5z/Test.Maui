@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using PropertyValidator.Services;
+using PropertyValidator.ValidationPack;
+using Test.Maui.Resources.Texts;
 using Test.Maui.Services;
 using Test.Maui.ViewModels;
 
@@ -20,6 +22,8 @@ public class MauiProgram
                     eventAggregator.GetEvent<NavigationRequestEvent>().Subscribe(context => {
                         // Handle the event
                     });
+
+                    ErrorMessageHelper.UpdateResource<ErrorMessages>();
                 });
 
                 prism.RegisterTypes(registry =>
